@@ -5,35 +5,35 @@ import pandas as pd
 
 # #第一種:連線到MySQL 創建Table
 # 建立連線
-# db = pymysql.connect(
-#   host = "127.0.0.1",
-#   user = "root",
-#   password = "7871609",
-#   database = "food",
-#   cursorclass=pymysql.cursors.DictCursor
-#   )
-# cur = db.cursor()
+db = pymysql.connect(
+  host = "127.0.0.1",
+  user = "root",
+  password = "7871609",
+  database = "food",
+  cursorclass=pymysql.cursors.DictCursor
+  )
+cur = db.cursor()
 #
 #
 #
 # # Create table  # VARCHAR()  #INT() #DECIMAL()
-# cur.execute("""CREATE TABLE Nutrition
-#             (ID INT(20) PRIMARY Key,
-#              Classification VARCHAR(10),
-#              Name  VARCHAR(15) NOT NULL,
-#              Content VARCHAR(30),
-#              Calories DECIMAL(7,2),
-#              Moisture_g DECIMAL(7,2),
-#              Saturated_fat_g DECIMAL(7,2),
-#              Carbohydrates_g DECIMAL(7,2),
-#              Total_sugar_g DECIMAL(7,2),
-#              lactose_g DECIMAL(7,2),
-#              calcium_mg DECIMAL(7,2))"""
-#             )
+cur.execute("""CREATE TABLE Nutrition
+            (ID INT(20) PRIMARY Key,
+             Classification VARCHAR(10),
+             Name  VARCHAR(15) NOT NULL,
+             Content VARCHAR(30),
+             Calories DECIMAL(7,2),
+             Moisture_g DECIMAL(7,2),
+             Saturated_fat_g DECIMAL(7,2),
+             Carbohydrates_g DECIMAL(7,2),
+             Total_sugar_g DECIMAL(7,2),
+             lactose_g DECIMAL(7,2),
+             calcium_mg DECIMAL(7,2))"""
+            )
 # #提交動作
-# cur.commit()
+cur.commit()
 # #結束連線
-# cur.close()
+cur.close()
 #---------------------------------------------------------------------------------------------------------------------------
 
 #第二種:使用to_sql把dataframe放進table

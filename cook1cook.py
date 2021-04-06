@@ -31,8 +31,7 @@ for categories in soup.select('div[class=category_list]'):          #抓取分�
     s_id = url_stitle.split('/')[-1]            #用url最後的數字當作子分類標題id
 #===============================================================================
     SubCategories = {s_id:s_Title}
-    # page = 1
-    page = 1138
+    page = 1
 #===============================================================================
     # 建立儲存圖片的資料夾
     Img_Dir_Path = './cook1cook_img/SubCategory_' + s_id

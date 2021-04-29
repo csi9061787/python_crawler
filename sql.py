@@ -8,7 +8,7 @@ import pandas as pd
 db = pymysql.connect(
   host = "127.0.0.1",
   user = "root",
-  password = "7871609",
+  password = "*****",
   database = "food",
   cursorclass=pymysql.cursors.DictCursor
   )

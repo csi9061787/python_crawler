@@ -38,7 +38,7 @@ cur.close()
 
 #第二種:使用to_sql把dataframe放進table
 # 建立連線
-engine = create_engine("mysql+pymysql://{}:{}@{}/{}?charset={}".format('root', '7871609', '127.0.0.1:3306', 'food','utf8'))
+engine = create_engine("mysql+pymysql://{}:{}@{}/{}?charset={}".format('root', '******', '127.0.0.1:3306', 'food','utf8'))
 con = engine.connect()
 
 #讀取要放的資料
